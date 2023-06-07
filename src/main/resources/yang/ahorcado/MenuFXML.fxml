@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" prefHeight="72.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yang.ahorcado.MenuController">
+   <top>
+      <ToolBar fx:id="menubar" prefHeight="72.0" BorderPane.alignment="CENTER">
+         <items>
+            <Button fx:id="btnJugar" mnemonicParsing="false" onAction="#jugar" prefHeight="62.0" style="-fx-background-color: #5177F2; -fx-border-color: red; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;" text="Jugar" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnJugador" mnemonicParsing="false" onAction="#abrirJugador" prefHeight="62.0" style="-fx-background-color: #5177F2; -fx-border-color: red; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;" text="Jugador" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPalabras" mnemonicParsing="false" onAction="#abrirPalabra" prefHeight="62.0" style="-fx-background-color: #5177F2; -fx-border-color: red; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;" text="Palabras" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPartidas" mnemonicParsing="false" onAction="#abrirPartida" prefHeight="62.0" style="-fx-background-color: #5177F2; -fx-border-color: red; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;" text="Partidas" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRank" mnemonicParsing="false" onAction="#abrirRank" prefHeight="62.0" style="-fx-background-color: #5177F2; -fx-border-color: red; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;" text="Rank" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#salir" prefHeight="62.0" style="-fx-background-color: #DB9513; -fx-border-color: red; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;" text="Salir" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+   </top>
+</BorderPane>
