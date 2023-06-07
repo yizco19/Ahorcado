@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yang.ahorcado.JugadorController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="523.0" layoutY="70.0" prefHeight="277.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#add" prefHeight="51.0" prefWidth="101.0" text="Añadir">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#edit" prefHeight="51.0" prefWidth="101.0" text="Modificar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#delete" prefHeight="51.0" prefWidth="101.0" text="Borrar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="tablaJugador" editable="true" layoutX="30.0" layoutY="48.0" prefHeight="321.0">
+        <columns>
+          <TableColumn fx:id="columNombre" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="columPartidaWin" prefWidth="75.0" text="Ganadas" />
+            <TableColumn fx:id="columPartidaLoss" prefWidth="84.0" text="Perdidas" />
+            <TableColumn fx:id="columPunto" prefWidth="67.0" text="puntos" />
+            <TableColumn fx:id="columImagen" prefWidth="167.0" text="Imagen" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

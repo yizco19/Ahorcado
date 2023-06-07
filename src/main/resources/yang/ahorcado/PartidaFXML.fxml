@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yang.ahorcado.PartidaController">
+   <children>
+      <TableView fx:id="tablaPartida" prefHeight="400.0">
+        <columns>
+          <TableColumn fx:id="columCodigo" prefWidth="100.0" text="Código" />
+            <TableColumn fx:id="columJugador" prefWidth="100.0" text="Jugador" />
+          <TableColumn fx:id="columPalabra" prefWidth="100.0" text="Palabra" />
+            <TableColumn fx:id="columnAdivinada" prefWidth="100.0" text="Adivnada" />
+        </columns>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+      </TableView>
+      <VBox prefHeight="306.0" prefWidth="221.0" spacing="5.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selecionar un jugador">
+               <font>
+                  <Font name="Amiri Quran Regular" size="23.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="boxJugador" prefHeight="34.0" prefWidth="164.0" style="-fx-background-color: #41CCFB;" />
+            <Button fx:id="buscar" mnemonicParsing="false" onAction="#buscar" prefHeight="56.0" prefWidth="101.0" style="-fx-background-color: BLUE; -fx-border-color: red; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;" text="Buscar" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <HBox.margin>
+            <Insets left="20.0" top="20.0" />
+         </HBox.margin>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yang.ahorcado.JuegoController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="380.0" prefWidth="301.0">
+         <children>
+            <Text fx:id="textVida" strokeType="OUTSIDE" strokeWidth="0.0" text="Vida:6" wrappingWidth="248.13671875">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="imagenVida" fitHeight="222.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagen/vida6.png" />
+               </image></ImageView>
+            <Text fx:id="textPalabra" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="269.13671875">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+         </children>
+         <HBox.margin>
+            <Insets top="20.0" />
+         </HBox.margin>
+      </VBox>
+      <AnchorPane prefHeight="400.0">
+         <children>
+            <Text fx:id="textoPalabra" layoutX="289.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="67.0" />
+               </font>
+            </Text>
+            <GridPane hgap="2.0" layoutY="76.0" prefHeight="230.0" prefWidth="289.0" vgap="2.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="C" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="D" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="E" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="F" GridPane.columnIndex="5">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="G" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="H" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="I" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="J" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="K" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="B" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="L" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="M" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="N" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="Ñ" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="O" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="P" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="Q" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="R" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="S" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="T" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="U" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="V" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="W" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="A">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="Y" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#btnClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 45;" text="Z" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+               </children>
+            </GridPane>
+            <Text fx:id="textJugador" layoutX="22.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador: " wrappingWidth="248.13671875">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

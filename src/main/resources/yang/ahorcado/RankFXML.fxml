@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yang.ahorcado.RankController">
+   <children>
+      <TableView fx:id="tablaRank">
+         <columns>
+            <TableColumn fx:id="columNombre" prefWidth="100.0" text="Nombre" />
+            <TableColumn fx:id="columPunto" prefWidth="100.0" text="Punto" />
+            <TableColumn fx:id="columImagen" prefWidth="300.0" text="Imagen" />
+         </columns>
+      </TableView>
+   </children>
+</VBox>
