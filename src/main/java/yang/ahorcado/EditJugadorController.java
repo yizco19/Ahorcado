@@ -15,7 +15,7 @@ public class EditJugadorController {
 
 
 
-    Jugador jugador;
+    Jugador editJugador;
     @FXML
     private ImageView foto;
 
@@ -45,7 +45,7 @@ public class EditJugadorController {
             // Cargar la imagen seleccionada en el ImageView "foto"
             Image imagen = new Image(selectedFile.toURI().toString());
             foto.setImage(imagen);
-           jugador.setFoto(new ImageView(imagen));
+            editJugador.setFoto(new ImageView(imagen));
         }
     }
 
@@ -74,14 +74,14 @@ public class EditJugadorController {
         textPartidaPerdida.setText(String.valueOf(jugador.getPartidas_perdidas()));
         textPunto.setText(String.valueOf(jugador.getPunto()));
         if(jugador.getFoto()!=null) foto.setImage(jugador.getFoto().getImage());
-        this.jugador=jugador;
+        this.editJugador=new Jugador(jugador);
 
     }
 
     public  Jugador  getJugador(){
+        editJugador.setNombre(textNombre.getText());
 
 
-
-        return jugador;
+        return editJugador;
     }
 }
