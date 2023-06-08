@@ -12,7 +12,7 @@
 
 <HBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yang.ahorcado.PartidaController">
    <children>
-      <TableView fx:id="tablaPartida" prefHeight="400.0">
+      <TableView fx:id="tablaPartida" prefHeight="400.0" style="-fx-border-width: 1; -fx-border-color: black;">
         <columns>
           <TableColumn fx:id="columCodigo" prefWidth="100.0" text="Código" />
             <TableColumn fx:id="columJugador" prefWidth="100.0" text="Jugador" />
@@ -22,15 +22,12 @@
          <HBox.margin>
             <Insets />
          </HBox.margin>
-         <padding>
-            <Insets bottom="10.0" left="10.0" top="10.0" />
-         </padding>
       </TableView>
-      <VBox prefHeight="306.0" prefWidth="221.0" spacing="5.0">
+      <VBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="221.0" spacing="5.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selecionar un jugador">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selecionar un jugador..">
                <font>
-                  <Font name="Amiri Quran Regular" size="23.0" />
+                  <Font size="20.0" />
                </font>
             </Text>
             <ComboBox fx:id="boxJugador" prefHeight="34.0" prefWidth="164.0" style="-fx-background-color: #41CCFB;" />
@@ -44,8 +41,11 @@
             </Button>
          </children>
          <HBox.margin>
-            <Insets left="20.0" top="20.0" />
+            <Insets bottom="20.0" left="5.0" right="20.0" top="20.0" />
          </HBox.margin>
       </VBox>
    </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
 </HBox>

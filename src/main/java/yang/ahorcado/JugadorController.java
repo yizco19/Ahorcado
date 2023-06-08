@@ -28,7 +28,7 @@ public class JugadorController {
     private TableView<Jugador> tablaJugador;
 
     @FXML
-    private TableColumn<Jugador, String> columImagen;
+    private TableColumn<Jugador, ImageView> columImagen;
 
     @FXML
     private TableColumn<Jugador, String> columNombre;
@@ -49,8 +49,9 @@ public class JugadorController {
         dialog.setHeaderText("Añadir Jugador");
         dialog.setContentText("Introduce tu nombre:");
         Optional<String> result=dialog.showAndWait();
-        String nombre=result.get().trim();
-        if(!nombre.isEmpty()){
+
+        if(result.isPresent()){
+            String nombre=result.get().trim();
             Jugador jugador=new Jugador(nombre);
             tablaJugador.getItems().add(jugador);
             Fichero.agregarJugadorFichero(jugador);
@@ -102,13 +103,29 @@ public class JugadorController {
         columPartidaLoss.setCellValueFactory(new PropertyValueFactory<>("partidas_perdidas"));
         columPartidaWin.setCellValueFactory(new PropertyValueFactory<>("partidas_ganadas"));
         columPunto.setCellValueFactory(new PropertyValueFactory<>("punto"));
-        ArrayList<Jugador> jugadores=Fichero.leerJugadores();
+        ArrayList<Jugador> jugadores = Fichero.leerJugadores();
 
-            tablaJugador.getItems().addAll(jugadores);
+        for (Jugador jugador : jugadores) {
+            if(jugador.getFoto()!=null){
+                ImageView resizedImage = resizeImage(jugador.getFoto());
+                jugador.setFoto(resizedImage);
+            }
 
 
+            tablaJugador.getItems().add(jugador);
+        }
 
+    }
 
+    /**
+     * Redimensionar el imagen de cada jugador a 100*100
+     * @param imageView
+     * @return
+     */
+    private ImageView resizeImage(ImageView imageView) {
+        imageView.setFitWidth(100);
+        imageView.setPreserveRatio(true);
+        return imageView;
     }
 
 

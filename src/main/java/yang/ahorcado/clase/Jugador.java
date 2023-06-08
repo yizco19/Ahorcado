@@ -32,14 +32,15 @@ public class Jugador {
         this.partidas_perdidas = 0;
         this.punto = 0;
     }
-    
-       public Jugador(Jugador jugador) {
+
+    public Jugador(Jugador jugador) {
         this.nombre = new SimpleStringProperty(jugador.getNombre());
         this.partidas_ganadas = jugador.getPartidas_ganadas();
         this.partidas_perdidas = jugador.getPartidas_perdidas();
         this.punto = jugador.getPunto();
         this.foto = jugador.getFoto();
     }
+
 
     public String getNombre() {
         return nombre.get();

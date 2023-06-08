@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import yang.ahorcado.clase.Fichero;
 
@@ -58,6 +57,19 @@ public class PalabrasController {
         Fichero.addPalabra(newPalabra,nombreFichero);
         listaFichero.getItems().add(newPalabra);
         textPalabra.clear();
+    }
+
+
+    @FXML
+    void delete(ActionEvent event) {
+        String palabraSeleccionada = listaFichero.getSelectionModel().getSelectedItem();
+        String nombreFichero = boxPalara.getSelectionModel().getSelectedItem();
+
+        if (palabraSeleccionada != null && nombreFichero != null) {
+            Fichero.eliminarPalabraFichero(palabraSeleccionada, nombreFichero);
+            listaFichero.getItems().remove(palabraSeleccionada);
+        }
+
     }
 
 

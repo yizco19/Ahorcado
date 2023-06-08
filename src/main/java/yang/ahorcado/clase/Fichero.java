@@ -1,5 +1,6 @@
 package yang.ahorcado.clase;
 
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -12,7 +13,9 @@ public class Fichero {
 
     private static File rutaPartida=new File("./src/main/java/yang/ahorcado/texto/partidas.txt");
     private static File rutaJugador=new File("./src/main/java/yang/ahorcado/texto/jugadores.txt");
-    private static File carpeta=new File("./src/main/java/yang/ahorcado/texto/palabra");
+
+    private  static  File carpetaImagenJugador= new File("./src/main/java/yang/ahorcado/imagen/jugador");
+    public static File carpetaPalabra=new File("./src/main/java/yang/ahorcado/texto/palabra");
 
     private static String rutaImagen="./src/main/java/yang/ahorcado/imagen";
 
@@ -121,7 +124,7 @@ public class Fichero {
     public static ArrayList<String> getNombresFicheros(){
 
         // Obtener todos los archivos en la carpeta
-        File[] archivos = carpeta.listFiles();
+        File[] archivos = carpetaPalabra.listFiles();
 
         // Lista para almacenar los nombres de archivo
         ArrayList<String> nombresArchivos = new ArrayList<>();
@@ -147,9 +150,11 @@ public class Fichero {
             BufferedWriter bw = new BufferedWriter(fw);
 
             // Escribir un jugador en una línea del archivo
-            bw.newLine();
+
 
             bw.write(jugadorNuevo.toData());
+
+            bw.newLine();
 
             bw.close();
             fw.close();
@@ -228,7 +233,7 @@ public class Fichero {
             bw.close();
             fw.close();
         } catch (IOException e) {
-            System.out.println("Error al agregar la palabra al archivo: " + e.getMessage());
+            mostrarAlertaError("Error Fichero Palabra","Error al agregar la palabra al archivo ");
         }
     }
 
@@ -236,16 +241,24 @@ public class Fichero {
         try {
             File archivo = new File(rutaFichero);
             if (archivo.exists()) {
-                File destino = new File(carpeta, archivo.getName());
+                File destino = new File(carpetaPalabra, archivo.getName());
                 Files.copy(archivo.toPath(), destino.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                System.out.println("Archivo de palabras copiado exitosamente.");
+                mostrarExitosa("Copia de archivo","Archivo de palabras copiado exitosamente.");
             } else {
-                System.out.println("El archivo de palabras no existe en la ruta especificada.");
+                mostrarAlertaError("Error Fichero Palabras","El archivo de palabras no existe en la ruta especificada.");
             }
         } catch (IOException e) {
-            System.out.println("Error al copiar el archivo de palabras: " + e.getMessage());
+            mostrarAlertaError("Error Fichero Palabras","Error al copiar el archivo de palabras");
         }
 
+    }
+
+    private static void mostrarExitosa(String titulo,String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
     }
 
     public  static  ArrayList<Rank> conseguirRank(){
@@ -317,7 +330,7 @@ public class Fichero {
             bw.close();
             fw.close();
         } catch (IOException e) {
-            System.out.println("Error al modificar el jugador en el archivo: " + e.getMessage());
+            mostrarAlertaError("Error Jugador Fichero","Error al modificar el jugador en el archivo");
         }
     }
 
@@ -329,4 +342,33 @@ public class Fichero {
         return image;
     }
 
+
+    public static void eliminarPalabraFichero(String palabraSeleccionada, String nombreFichero) {
+        File rutapalabra = new File(carpetaPalabra, nombreFichero);
+        try {
+            ArrayList<String> palabras = leerPalabras(nombreFichero);
+
+            palabras.removeIf(palabra -> palabra.equals(palabraSeleccionada));
+
+            FileWriter fw = new FileWriter(rutapalabra);
+            BufferedWriter bw = new BufferedWriter(fw);
+            for (String palabra : palabras) {
+                bw.write(palabra);
+                bw.newLine();
+            }
+            bw.close();
+            fw.close();
+        } catch (IOException e) {
+            mostrarAlertaError("Error Fichero Palabra","Error al eliminar la palabra del archivo");
+        }
+    }
+
+
+    private static void mostrarAlertaError(String titulo, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ListView?>
@@ -9,15 +10,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yang.ahorcado.PalabrasController">
+<AnchorPane prefHeight="400.0" prefWidth="565.0" style="-fx-background-color: #f2e4e6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yang.ahorcado.PalabrasController">
    <children>
-      <ListView fx:id="listaFichero" layoutX="22.0" layoutY="13.0" prefHeight="373.0" prefWidth="284.0" />
+      <ListView fx:id="listaFichero" layoutX="22.0" layoutY="13.0" prefHeight="373.0" prefWidth="284.0" style="-fx-border-color: #9f9fc7; -fx-border-width: 5; -fx-border-radius: 10; -fx-background-radius: 10;" />
       <Text fx:id="nombre" layoutX="164.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="118.0">
          <font>
             <Font size="29.0" />
          </font>
       </Text>
-      <VBox layoutX="313.0" layoutY="34.0" prefHeight="323.0" prefWidth="220.0" spacing="30.0">
+      <VBox layoutX="319.0" layoutY="14.0" prefHeight="373.0" prefWidth="230.0" spacing="5.0" style="-fx-background-color: #e4ebf2;">
          <children>
             <VBox prefHeight="115.0" prefWidth="220.0" spacing="5.0">
                <children>
@@ -27,7 +28,7 @@
                      </font>
                   </Text>
                   <ComboBox fx:id="boxPalara" prefWidth="150.0" style="-fx-background-color: #41CCFB; -fx-border-color: #1773CC; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 8;" />
-                  <Button mnemonicParsing="false" onAction="#mostrar" prefHeight="35.0" prefWidth="105.0" style="-fx-text-fill: white; -fx-background-color: #33ABD4;" text="Mostrar">
+                  <Button mnemonicParsing="false" onAction="#mostrar" prefHeight="35.0" prefWidth="105.0" style="-fx-text-fill: white; -fx-background-color: #02b2ed;" text="Mostrar">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -37,19 +38,36 @@
             <VBox prefHeight="70.0" prefWidth="165.0" spacing="5.0">
                <children>
                   <TextField fx:id="textPalabra" />
-                  <Button mnemonicParsing="false" onAction="#addPalabra" prefHeight="35.0" prefWidth="129.0" style="-fx-text-fill: white; -fx-background-color: #33ABD4;" text="Añadir Palabra">
+                  <Button mnemonicParsing="false" onAction="#addPalabra" prefHeight="35.0" prefWidth="129.0" style="-fx-text-fill: white; -fx-background-color: #02b2ed;" text="Añadir Palabra">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
                </children>
             </VBox>
-            <Button fx:id="btnInsertar" mnemonicParsing="false" onAction="#Insertar" prefHeight="52.0" prefWidth="138.0" style="-fx-text-fill: white; -fx-background-color: #33ABD4;" text="Insertar fichero">
+            <Button mnemonicParsing="false" onAction="#delete" prefHeight="35.0" style="-fx-text-fill: white; -fx-background-color: #8643de;" text="Eliminar Palabra">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnInsertar" mnemonicParsing="false" onAction="#Insertar" prefHeight="52.0" prefWidth="138.0" style="-fx-text-fill: white; -fx-background-color: #02b2ed;" text="Insertar fichero">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
             </Button>
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
       </VBox>
    </children>
 </AnchorPane>

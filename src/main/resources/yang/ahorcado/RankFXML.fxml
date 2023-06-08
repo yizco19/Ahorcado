@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
@@ -12,6 +13,9 @@
             <TableColumn fx:id="columPunto" prefWidth="100.0" text="Punto" />
             <TableColumn fx:id="columImagen" prefWidth="300.0" text="Imagen" />
          </columns>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
       </TableView>
    </children>
 </VBox>

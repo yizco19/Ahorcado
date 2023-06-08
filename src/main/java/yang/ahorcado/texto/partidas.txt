@@ -1,3 +1,0 @@
-1;YANG;MANZANA;false
-2;YANG;ASDASD;false
-3;YANG;PLATANO;true

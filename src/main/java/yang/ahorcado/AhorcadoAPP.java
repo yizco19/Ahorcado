@@ -2,6 +2,7 @@ package yang.ahorcado;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
@@ -14,7 +15,7 @@ public class AhorcadoAPP extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MenuFXML.fxml"));
-        BorderPane mainPane = fxmlLoader.load();
+        Parent mainPane = fxmlLoader.load();
 
         Scene scene = new Scene(mainPane);
         stage.setTitle("Ahorcado");
